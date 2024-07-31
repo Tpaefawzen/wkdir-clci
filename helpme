@@ -1,0 +1,42 @@
+~/wkdir-clci $ cat >shoulddieonemptyline.clci
+DO,1<-#99
+DOCOMEFROM#9
+DOWRITEIN,1
+DO,2<-,1SUB#1
+(9)DOREADOUT,1
+~/wkdir-clci $ sick
+shoulddieonemptyline.clci
+zundoko/
+~/wkdir-clci $ sick shoulddieonemptyline.clci
+~/wkdir-clci $ ./shoulddieonemptyline.io <shoulddieonemptyline.clci
+*000 D!,1<-#99
+D!C!(EFR!(#9
+D!WRITEI+,1
+D!,2<-,1SUB#1
+(9)D!READ!UT,1
+~/wkdir-clci $ ls
+shoulddieonemptyline.clci  zundoko
+shoulddieonemptyline.io
+~/wkdir-clci $ less shoulddieonemptyline.
+shoulddieonemptyline.: No such file or directory
+~/wkdir-clci $ less shoulddieonemptyline.io
+~/wkdir-clci $ cat *clci
+DO,1<-#99
+DOCOMEFROM#9
+DOWRITEIN,1
+DO,2<-,1SUB#1
+(9)DOREADOUT,1
+~/wkdir-clci $ sick shoulddieonemptyline.clci        ~/wkdir-clci $ ./shoulddieonemptyline.io <shoulddieonemptyline.clci
+*000 KNZMFABBR KAKFSIWKFABR KQWDHSDCNZR KNWMFNZLY
+BD KWSE KYHNZR
+~/wkdir-clci $ sick shoulddieonemptyline.clci        ~/wkdir-clci $ ./shoulddieonemptyline.io <shoulddieonemptyline.clci
+*000 KNZMFABBR KAKFSIWKFABR KQWDHSDCNZR KNWMFNZLY
+BD KWSE KYHNZR
+~/wkdir-clci $ sick shoulddieonemptyline.clci        ~/wkdir-clci $ ./shoulddieonemptyline.io <shoulddieonemptyline.clci
+DO,1<-#99
+DOCOMEFROM#9
+DOWRITEIN,1
+DO,2<-,1SUB#1
+(9)DOREADOUT,1
+*280 Invalid array: Subscript out of range
+~/wkdir-clci $

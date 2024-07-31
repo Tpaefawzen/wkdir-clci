@@ -1,0 +1,6 @@
+DO,1<-#9
+DO;1<-#10
+todo: enter KI-YO-SHI! to ;1
+DOCOMEFROM#9
+DOWRITEIN,1
+DO,2<-,1SUB#1

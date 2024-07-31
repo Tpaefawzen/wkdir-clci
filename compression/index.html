@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+ <title>anarchy golf - compression challenge but not in the way you think</title>
+ <link rev="MADE" href="mailto:shinichiro.hamaji _at_ gmail.com">
+ <link rel="INDEX" href=".">
+ <link rel="stylesheet" type="text/css" href="/site.css">
+</head>
+
+<body>
+<script>
+use_form = function() {
+  document.getElementById('file').innerHTML='<select name="ext"><option value="fsh">><></option><option value="a+">A+</option><option value="adb">Ada</option><option value="aheui">Aheui</option><option value="arc">Arc</option><option value="asy">Asymptote</option><option value="awk">AWK</option><option value="sh">Bash</option><option value="bash">Bash (builtins)</option><option value="bas">BASIC</option><option value="bc">bc</option><option value="bef">Befunge</option><option value="bef98">Befunge-98</option><option value="bf">Brainfuck</option><option value="blsq">Burlesque</option><option value="c">C</option><option value="cs">C#</option><option value="cpp">C++</option><option value="chpl">Chapel</option><option value="clci">CLC-INTERCAL</option><option value="clj">Clojure</option><option value="cob">COBOL</option><option value="l">Common LISP</option><option value="cr">Crystal</option><option value="curry">Curry</option><option value="cy">Cyan</option><option value="d">D</option><option value="di">D-compile-time</option><option value="dc">dc</option><option value="com">DOS</option><option value="erl">Erlang</option><option value="exu">Euphoria</option><option value="nand">FerNANDo</option><option value="fish">Fish</option><option value="flog">FlogScript</option><option value="for">Forth</option><option value="f95">Fortran</option><option value="s">gas</option><option value="gplot">gnuplot</option><option value="go">Go</option><option value="gs">GolfScript</option><option value="grb">goruby</option><option value="grass">Grass</option><option value="groovy">Groovy</option><option value="gs2">gs2</option><option value="hs">Haskell</option><option value="hxg">Hexagony</option><option value="icn">Icon</option><option value="io">Io</option><option value="ijs">J</option><option value="java">Java</option><option value="js">JavaScript</option><option value="jelly">Jelly</option><option value="jq">jq</option><option value="jq16">jq 1.6</option><option value="class">JVM</option><option value="k">K</option><option value="kt">Kite</option><option value="lab">Labyrinth</option><option value="lazy">Lazy-K</option><option value="ly">LilyPond</option><option value="lmn">LMNtal</option><option value="logo">Logo</option><option value="lua">Lua</option><option value="m4">m4</option><option value="mk">make</option><option value="mal">Malbolge</option><option value="max">Maxima</option><option value="mind">Mind</option><option value="ms">Minus</option><option value="bfsl">MNNBFSL</option><option value="n">Nemerle</option><option value="nbb">Nibbles</option><option value="m">ObjC</option><option value="ml">OCaml</option><option value="oct">Octave</option><option value="gp">PARI/GP</option><option value="pas">Pascal</option><option value="pef">Pefunge</option><option value="pl">Perl</option><option value="pl6">Perl6</option><option value="php">PHP</option><option value="piet">Piet</option><option value="pike">Pike</option><option value="ps">Postscript</option><option value="pro">Prolog</option><option value="py">Python</option><option value="py3">Python3</option><option value="qcl">QCL</option><option value="r">R</option><option value="reb">REBOL</option><option value="rexx">REXX</option><option value="rb">Ruby</option><option value="rb2">Ruby2</option><option value="rs">Rust</option><option value="scala">Scala</option><option value="scm">Scheme</option><option value="sed">sed</option><option value="st">Smalltalk</option><option value="sno">SNOBOL</option><option value="nut">Squirrel</option><option value="tcl">Tcl</option><option value="lamb">Universal Lambda</option><option value="unl">Unlambda</option><option value="vhdl">VHDL</option><option value="vi">Vim</option><option value="wake">wake</option><option value="wr">Whirl</option><option value="ws">Whitespace</option><option value="out">x86</option><option value="xgawk">xgawk</option><option value="xtal">Xtal</option><option value="z8b">z80</option><option value="zsh">Zsh</option></select><br><textarea name="code" rows="20" cols="80"></textarea>';
+  return false;
+}
+</script>
+<h1>compression challenge but not in the way you think</h1>
+<h2>Submit</h2>
+<p>
+<form action="submit.rb" method="POST" enctype="multipart/form-data">
+Your name: <input name="user" value=""><br>
+<div id="file">
+File: <input type="file" name="file">
+<input type="button" onclick="use_form(); 1;" value="use form">
+</div>
+Open <a href="bas.html">code-statistics</a>: <input type="checkbox" name="reveal"><br>
+<input type="submit"><br>
+<input type="hidden" name="problem" value="compression+challenge+but+not+in+the+way+you+think">
+</form>
+</p>
+<p>Language is selected by the extension of the file. See <a href="version.rb">the list of supported languages</a> to know the extension of your language.</p>
+<h2>Problem</h2>
+<p>There are two tokens:<br><br>Ln: Print the next n tokens as literals, don't interpret<br>Rn: Print the last n tokens printed<br><br>Evaluate these programs, one per line</p>
+<h2>Options</h2>
+<p>exec is denied</p>
+<p><a href="rejudge.html">rejudge feature</a> is enabled</p>
+<p>6day(s) and 21:08:51 before deadline (07/28 14:37:09 JST), all source codes will be revealed after the deadline</p>
+<h2>Sample input:<a href="#test1" name="test1">_</a></h2>
+<pre>
+L1 L1
+L1 R1
+L2 L3 L1
+L2 R1 R2
+L1 L1 L1 L1
+L2 L1 L2 R2
+L2 L1 L2 R1
+L2 R2 R2 R2 R2 R2
+L0 L0 L0 L0 L1 L0
+</pre>
+<h2>Sample output:</h2>
+<pre>
+L1
+R1
+L3 L1
+R1 R2
+L1 L1
+L1 L2 L1 L2
+L1 L2 L2
+R2 R2 R2 R2 R2 R2 R2 R2
+L0
+</pre>
+<h2>Sample input:<a href="#test2" name="test2">_</a></h2>
+<pre>
+L3 L1 R1 R2 L1 L2 L2 L1 L4 L3 R4 R2 L0
+L2 L2 R2 L3 L2 L1 L0 R2 L1 R3 R2 R2
+L3 R4 R1 L1 R1 R2 R4
+L1 R1
+L2 L4 L4
+L2 R1 L2 R2 L2 R3 L2 R3 R3 R1
+L3 R4 R3 L0 L4 L0 R4 R4 L2
+L1 L1 L1 L4 L2 L2 L4 R2 R4 L1 L2 L3 L2 L0 R3
+L3 R4 R1 R3
+L3 L0 R4 R3 L0 L2 L1 R1 R1 L2 R3 R4 R3 R2
+L2 R2 L4 L2 L0 L0 L1 R3
+L2 L0 L4 L1 R2 R3 L0
+L4 L1 R4 R1 L3
+L1 L1
+L2 L4 R4
+L4 R1 L4 L3 L1
+L2 L2 L0
+L2 L1 R1
+L1 L2 L4 R3 R3 L0 R2 R2 L0 R3
+L2 R4 R3 L4 L3 L4 L3 R4
+L1 R4 L2 L0 L2 L2 L1 L2 L3 R2 R4 L4 R4 R3
+L2 R3 R1 L1 R1 L0
+L3 L3 R3 L3 R1 R1
+L1 L0 L3 R2 L4 L1 R1 L1 L2 R2 R3 L0 L0
+L3 R1 L0 L0 L2 L3 L1 L3 R3 R1 R2
+</pre>
+<h2>Sample output:</h2>
+<pre>
+L1 R1 R2 L2 L1 L4 R4 R2 L0
+L2 R2 L2 L1 L0 L1 L0 R3 L0 R3 L0 R3
+R4 R1 L1 L1 L1 L1 L1 L1 L1 L1
+R1
+L4 L4
+R1 L2 R1 L2 R3 L2 L2 R3 L2 L2 R3 L2 L2
+R4 R3 L0 L0 R4 R4 L2
+L1 L4 L2 L4 L2 L4 L2 L4 L2 L4 L2 L2 L0 R3
+R4 R1 R3
+L0 R4 R3 L1 R1 R1 R3 R4 R1 R3 R4 R3 R4
+R2 L4 L0 L0 R3
+L0 L4 R2 L0 L4 R2
+L1 R4 R1 L3
+L1
+L4 R4
+R1 L4 L3 L1
+L2 L0
+L1 R1
+L2 R3 R3 L0 R2 L0 R2 R2 L0 R2
+R4 R3 L3 L4 L3 R4
+R4 L0 L2 L1 L2 R2 R4 L4 L2 R2 R4 L4 R2 R4 L4
+R3 R1 R1
+L3 R3 L3 L3 L3
+L0 R2 L4 L1 L1 L2 L1 L2 L2 L1 L2
+R1 L0 L0 L3 L1 R3 R1 R2
+</pre>
+<h2>Sample input:<a href="#test3" name="test3">_</a></h2>
+<pre>
+L4 L3 R4 L2 L3 R3 L1 L0 L0 R3
+L2 R1 L0 L0 L3 L4 R4 R1 L2 L2 R4 R2
+L4 L0 L4 R2 L2 R2
+L1 L2 L3 L2 R1 R2 L0 L3 R1 R4 R1 R4
+L1 L2 L4 R4 L3 R3 L1 L1 L1 L0
+L4 R4 R2 R2 R3 L1 L2 R1 R2 R4 R4
+L2 L4 R4
+L4 L3 R3 L4 L2
+L0 L2 R3 R3 L3 L0 L0 R4
+L4 R2 R4 R3 L4
+L2 L4 R2
+L4 R4 R3 L3 L2 R4 L2 L4 L4 R3 R2 L2 L3 L2
+L3 L2 L4 L3
+L4 L2 L3 R2 R1
+L1 R3 R1 L3 R3 L3 L3 R3 R4 R2
+L4 L2 R2 R2 R4 L3 R1 L3 L0 R2 R4 R2 R4
+L3 L1 L3 R4 L4 L2 L0 R1 L2 R4 R3 R4
+L4 R3 L4 L4 L2 R3
+L4 R3 R2 R4 R2 R4 R3 R2 L0
+L0 L2 L4 R4
+L0 L1 R1
+L2 R1 R1 L3 L0 L2 L4 R3 L0 L1 L1 R2 R3
+L2 R2 R2 L4 L2 R4 R2 R4
+L2 L0 L4 R1 L2 R2 L4 R3 L1 R3 R2 R3
+L0 L3 R2 R1 R1 L1 L0 L1 R1
+</pre>
+<h2>Sample output:</h2>
+<pre>
+L3 R4 L2 L3 R4 L2 L3 L0 L2 L3 L0
+R1 L0 L4 R4 R1 L2 R4 L2 R4
+L0 L4 R2 L2 R2 L2
+L2 L2 R1 R2 R1 R4 R1 R2 R1 R4 R1
+L2 R4 L3 R3 L1 L1
+R4 R2 R2 R3 L2 L2 L2 L2 L2 L2 L2 L2 L2 L2 L2 L2
+L4 R4
+L3 R3 L4 L2
+R3 R3 L0 L0 R4
+R2 R4 R3 L4
+L4 R2
+R4 R3 L3 L2 R4 R3 L3 L2 L4 L4 L2 L4 L4 L4 L4 L3 L2
+L2 L4 L3
+L2 L3 R2 R1
+R3 R3 R3 L3 L3 R3 L3 L3 L3 R3 L3 L3 L3 L3
+L2 R2 R2 R4 R1 L3 L0 L3 L0 L3 L0 L3 L0 L3 L0 L3 L0 L3 L0
+L1 L3 R4 L2 L0 R1 L2 L2 L0 R1 L2 L0 R1 L2 L2 L0 R1 L2
+R3 L4 L4 L2 L4 L4 L2
+R3 R2 R4 R2 R3 R2 R4 R2 R2 R4 R2 R4 R2
+L4 R4
+R1
+R1 R1 L0 L2 L4 L0 L2 L4 L1 L4 L1 L1 L4 L1
+R2 R2 L2 R4 R2 R4
+L0 L4 L4 R2 L4 L4 R2 L4 R3 L4 R3 R3 L4 R3
+R2 R1 R1 L0 R1
+</pre>
+<h2>Ranking</h2><h3><a href="/l.rb?rb">Ruby</a> <a href="#Ruby" name="Ruby">_</a></h3><table border="1"><tr><th>Rank</th><th>User</th><th>Size</th><th>Time</th><th>Date</th><th><a href="bas.html">Statistics</a></th></tr><tr><td>1</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/rotary-o_1657946337&rb">rotary-o</a></td><td>76</td><td>0.0427</td><td>2022/07/16 13:38:57</td><td>0B / 42B / 32B</td></tr></table><h3><a href="/l.rb?rb2">Ruby2</a> <a href="#Ruby2" name="Ruby2">_</a></h3><table border="1"><tr><th>Rank</th><th>User</th><th>Size</th><th>Time</th><th>Date</th><th><a href="bas.html">Statistics</a></th></tr><tr><td>1</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/rotary-o_1657939972&rb2">rotary-o</a></td><td>81</td><td>0.2507</td><td>2022/07/16 11:52:52</td><td>0B / 42B / 36B</td></tr><tr><td>2</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/Sisyphus_1657852636&rb2">Sisyphus</a></td><td>82</td><td>0.1887</td><td>2022/07/15 11:37:16</td><td>0B / 41B / 38B</td></tr></table><h3><a href="/l.rb?pl">Perl</a> <a href="#Perl" name="Perl">_</a></h3><table border="1"><tr><th>Rank</th><th>User</th><th>Size</th><th>Time</th><th>Date</th><th><a href="bas.html">Statistics</a></th></tr><tr><td>1</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/tails_1657782741&pl">tails</a></td><td>70</td><td>0.0677</td><td>2022/07/14 16:12:21</td><td>0B / 21B / 48B</td></tr></table><h3><a href="/l.rb?py">Python</a> <a href="#Python" name="Python">_</a></h3><table border="1"><tr><th>Rank</th><th>User</th><th>Size</th><th>Time</th><th>Date</th><th><a href="bas.html">Statistics</a></th></tr><tr><td>1</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/Erik+the+Outgolfer_1657793130&py">Erik the Outgolfer</a></td><td>118</td><td>0.0938</td><td>2022/07/14 19:05:30</td><td>0B / 57B / 52B</td></tr></table><h3><a href="/l.rb?py3">Python3</a> <a href="#Python3" name="Python3">_</a></h3><table border="1"><tr><th>Rank</th><th>User</th><th>Size</th><th>Time</th><th>Date</th><th><a href="bas.html">Statistics</a></th></tr><tr><td>1</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/btnlq_1658288370&py3">btnlq</a></td><td>104</td><td>0.1442</td><td>2022/07/20 12:39:30</td><td>0B / 53B / 43B</td></tr><tr><td>2</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/xnor_1658292910&py3">xnor</a></td><td>106</td><td>0.1526</td><td>2022/07/20 13:55:10</td><td>0B / 53B / 45B</td></tr><tr><td>3</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/lynn_1657913290&py3">lynn</a></td><td>108</td><td>0.1573</td><td>2022/07/16 04:28:10</td><td>0B / 53B / 46B</td></tr><tr><td>4</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/Adam_1658349589&py3">Adam</a></td><td>108</td><td>0.1431</td><td>2022/07/21 05:39:49</td><td>0B / ?B / ?B</td></tr><tr><td>5</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/Erik+the+Outgolfer_1657793960&py3">Erik the Outgolfer</a></td><td>111</td><td>0.1434</td><td>2022/07/14 19:19:20</td><td>0B / 52B / 51B</td></tr></table><h3><a href="/l.rb?js">JavaScript</a> <a href="#JavaScript" name="JavaScript">_</a></h3><table border="1"><tr><th>Rank</th><th>User</th><th>Size</th><th>Time</th><th>Date</th><th><a href="bas.html">Statistics</a></th></tr><tr><td>1</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/ZED.CWT_1657784014&js">ZED.CWT</a></td><td>119</td><td>0.0632</td><td>2022/07/14 16:33:34</td><td>0B / 66B / 51B</td></tr></table><h3><a href="/l.rb?hs">Haskell</a> <a href="#Haskell" name="Haskell">_</a></h3><table border="1"><tr><th>Rank</th><th>User</th><th>Size</th><th>Time</th><th>Date</th><th><a href="bas.html">Statistics</a></th></tr><tr><td>1</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/Sakisan_1657874897&hs">Sakisan</a></td><td>150</td><td>0.0507</td><td>2022/07/15 17:48:17</td><td>0B / 83B / 56B</td></tr></table><h3><a href="/l.rb?java">Java</a> <a href="#Java" name="Java">_</a></h3><table border="1"><tr><th>Rank</th><th>User</th><th>Size</th><th>Time</th><th>Date</th><th><a href="bas.html">Statistics</a></th></tr><tr><td>1</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/rotary-o_1657963452&java">rotary-o</a></td><td>224</td><td>0.1608</td><td>2022/07/16 18:24:12</td><td>0B / 130B / 88B</td></tr></table><h3><a href="/l.rb?sed">sed</a> <a href="#sed" name="sed">_</a></h3><table border="1"><tr><th>Rank</th><th>User</th><th>Size</th><th>Time</th><th>Date</th><th><a href="bas.html">Statistics</a></th></tr><tr><td>1</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/tails_1657853811&sed">tails</a></td><td>137</td><td>0.0451</td><td>2022/07/15 11:56:51</td><td>0B / 26B / 94B</td></tr></table><h3><a href="/l.rb?bash">Bash (builtins)</a> <a href="#Bash (builtins)" name="Bash (builtins)">_</a></h3><table border="1"><tr><th>Rank</th><th>User</th><th>Size</th><th>Time</th><th>Date</th><th><a href="bas.html">Statistics</a></th></tr><tr><td>1</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/tails_1657848762&bash">tails</a></td><td>94</td><td>0.0602</td><td>2022/07/15 10:32:42</td><td>0B / 31B / 47B</td></tr><tr><td>2</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/McBusLuck_1657828029&bash">McBusLuck</a></td><td>172</td><td>0.0586</td><td>2022/07/15 04:47:09</td><td>0B / 50B / 103B</td></tr></table><h3><a href="/l.rb?vi">Vim</a> <a href="#Vim" name="Vim">_</a></h3><table border="1"><tr><th>Rank</th><th>User</th><th>Size</th><th>Time</th><th>Date</th><th><a href="bas.html">Statistics</a></th></tr><tr><td>1</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/HPWiz_1658269043&vi">HPWiz</a></td><td>48</td><td>0.0745</td><td>2022/07/20 07:17:23</td><td>1B / 31B / 10B</td></tr><tr><td>2</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/Sakisan_1658301639&vi">Sakisan</a></td><td>57</td><td>0.0774</td><td>2022/07/20 16:20:39</td><td>1B / 33B / 13B</td></tr></table><h3><a href="/l.rb?scala">Scala</a> <a href="#Scala" name="Scala">_</a></h3><table border="1"><tr><th>Rank</th><th>User</th><th>Size</th><th>Time</th><th>Date</th><th><a href="bas.html">Statistics</a></th></tr><tr><td>1</td><td><a href="reveal.rb?compression+challenge+but+not+in+the+way+you+think/rotary-o_1657945791&scala">rotary-o</a></td><td>136</td><td>7.1296</td><td>2022/07/16 13:29:51</td><td>0B / 81B / 46B</td></tr></table>
+<h3>Language Ranking<a href="#ranking" name="ranking">_</a></h3>
+<table border="1"><tr><th>Rank</th><th>Lang</th><th>User</th><th>Size</th><th>Score</th></tr>
+<tr><td>1</td><td>Vim</td><td>HPWiz</td><td>48</td><td>10000</td></tr>
+<tr><td>2</td><td>Perl</td><td>tails</td><td>70</td><td>6857</td></tr>
+<tr><td>3</td><td>Ruby</td><td>rotary-o</td><td>76</td><td>6315</td></tr>
+<tr><td>4</td><td>Ruby2</td><td>rotary-o</td><td>81</td><td>5925</td></tr>
+<tr><td>5</td><td>Bash (builtins)</td><td>tails</td><td>94</td><td>5106</td></tr>
+<tr><td>6</td><td>Python3</td><td>btnlq</td><td>104</td><td>4615</td></tr>
+<tr><td>7</td><td>Python</td><td>Erik the Outgolfer</td><td>118</td><td>4067</td></tr>
+<tr><td>8</td><td>JavaScript</td><td>ZED.CWT</td><td>119</td><td>4033</td></tr>
+<tr><td>9</td><td>Scala</td><td>rotary-o</td><td>136</td><td>3529</td></tr>
+<tr><td>10</td><td>sed</td><td>tails</td><td>137</td><td>3503</td></tr>
+<tr><td>11</td><td>Haskell</td><td>Sakisan</td><td>150</td><td>3200</td></tr>
+<tr><td>12</td><td>Java</td><td>rotary-o</td><td>224</td><td>2142</td></tr>
+</table>
+<p><a href="/">return to the top page</a></p></body></html>
